@@ -71,6 +71,12 @@ _MODEL_CLASSES = {
         'model': OPTForCausalLM,
         'wrapper': LMTokenizerWrapper,
     }),
+    'bloom': ModelClass(**{
+        'config': BloomConfig,
+        'tokenizer': BloomTokenizerFast,
+        'model': BloomForCausalLM,
+        'wrapper': LMTokenizerWrapper,
+    }),
     'electra': ModelClass(**{
         'config': ElectraConfig,
         'tokenizer': ElectraTokenizer,
