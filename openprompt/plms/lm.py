@@ -90,7 +90,8 @@ class LMTokenizerWrapper(TokenizerWrapper):
         # delete shortenable ids
         encoder_inputs.pop("shortenable_ids")
         encoder_inputs = self.concate_parts(input_dict=encoder_inputs)
-        encoder_inputs = self.add_special_tokens(encoder_inputs=encoder_inputs) # this will do nothing in GPT2 tokenizer
+        # TODO:Debug:Restore under if not 'bloom' in model_name
+        # encoder_inputs = self.add_special_tokens(encoder_inputs=encoder_inputs) # this will do nothing in GPT2 tokenizer
         # create special input ids
         encoder_inputs['attention_mask'] = [1] * len(encoder_inputs['input_ids'])
         if self.create_token_type_ids:
