@@ -13,7 +13,8 @@ from transformers import BertConfig, BertTokenizer, BertModel, BertForMaskedLM, 
                          OpenAIGPTTokenizer, OpenAIGPTLMHeadModel, OpenAIGPTConfig, \
                          GPT2Config, GPT2Tokenizer, GPT2LMHeadModel, \
                          OPTConfig, OPTForCausalLM, \
-                         ElectraConfig, ElectraForMaskedLM, ElectraTokenizer
+                         ElectraConfig, ElectraForMaskedLM, ElectraTokenizer, \
+                         BloomConfig, BloomTokenizerFast, BloomForCausalLM
 from collections import namedtuple
 from yacs.config import CfgNode
 
