@@ -10,6 +10,7 @@ from transformers import BertConfig, BertTokenizer, BertModel, BertForMaskedLM, 
                          RobertaConfig, RobertaTokenizer, RobertaModel, RobertaForMaskedLM, \
                          AlbertTokenizer, AlbertConfig, AlbertModel, AlbertForMaskedLM, \
                          T5Config, T5Tokenizer, T5ForConditionalGeneration, \
+                         MT5Config, MT5Tokenizer, MT5ForConditionalGeneration, \
                          OpenAIGPTTokenizer, OpenAIGPTLMHeadModel, OpenAIGPTConfig, \
                          GPT2Config, GPT2Tokenizer, GPT2LMHeadModel, \
                          OPTConfig, OPTForCausalLM, \
@@ -65,6 +66,12 @@ _MODEL_CLASSES = {
         'tokenizer': T5Tokenizer,
         'model': T5ForConditionalGeneration,
         'wrapper': T5LMTokenizerWrapper,
+    }),
+    'mt5':ModelClass(**{
+        'config': MT5Config,
+        'tokenizer': MT5Tokenizer,
+        'model': MT5ForConditionalGeneration,
+        'wrapper': T5TokenizerWrapper
     }),
     'opt': ModelClass(**{
         'config': OPTConfig,
