@@ -32,7 +32,7 @@ print(dataset['train'][0])
 
 # You can load the plm related things provided by openprompt simply by calling:
 from openprompt.plms import load_plm
-plm, tokenizer, model_config, WrapperClass =load_plm('t5','t5-base' )  # ('bloom','bigscience/bloomz-1b1' ) #('opt','facebook/opt-1.3b') # ('bloom','bigscience/bloomz-1b1' ) # load_plm("t5", "t5-base")
+plm, tokenizer, model_config, WrapperClass = load_plm('mt5','google/mt5-base' )  # ('bloom','bigscience/bloomz-1b1' ) #('opt','facebook/opt-1.3b') # ('bloom','bigscience/bloomz-1b1' ) # load_plm("t5", "t5-base")
 
 # Constructing Template
 # A template can be constructed from the yaml config, but it can also be constructed by directly passing arguments.
