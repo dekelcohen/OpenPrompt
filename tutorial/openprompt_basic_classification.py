@@ -42,8 +42,8 @@ mytemplate = ManualTemplate(tokenizer=tokenizer, text=template_text)
 
 # To better understand how does the template wrap the example, we visualize one instance.
 
-wrapped_example = mytemplate.wrap_one_example(dataset['train'][0])
-print(wrapped_example)
+# wrapped_example = mytemplate.wrap_one_example(dataset['train'][0])
+# print(wrapped_example)
 
 
 # Now, the wrapped example is ready to be pass into the tokenizer, hence producing the input for language models.
